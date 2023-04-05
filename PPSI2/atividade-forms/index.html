@@ -3,32 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #email, #senha {
+            display: block ;
+            padding: 5px 3px;
+            margin-bottom: 20px;
+            border: solid 1.5px gray;
+        }
+
+        #email {
+            width: 25%;
+        }
+
+
+        label {
+            font-weight: bold;
+        }
+
+        fieldset {
+            width: 40%;
+            border: solid 1.5px gray;
+        }
+
+        #email:focus, #senha:focus {
+            border: solid 2px black;
+            background-color: rgb(190, 190, 110);
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        fieldset label {
+            font-weight: normal;
+            margin-right: 20px;
+        }
+
+        fieldset input {
+            margin-right: 0px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            
+            background-color: black;
+            color: white;
+            border: none;
+        }
+    </style>
 </head>
 <body>
     
     <h1>Cadastre-se!</h1>
 
-    <form action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php">
-        <label for="email">E-mail</label><br>
-        <input type="email" name="email" id="email" placeholder="Seu e-mail" required><br><br>
+    <form action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php" method="post">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
 
-        <label for="email">Senha</label><br>
-        <input type="password" name="senha" id="senha" placeholder="Sua senha" maxlength="8" required><br><br>
+        <label for="email">Senha</label>
+        <input type="password" name="senha" id="senha" placeholder="Sua senha" maxlength="8" minlength="8" required>
 
         <fieldset>
 
             <legend>Deseja assinar o nosso boletim?</legend>
 
-            <input type="radio" name="boletim" id="sim" value="sim" checked>
+            <input type="radio" name="boletim" id="sim" value="sim" checked required>
             <label for="sim">Sim</label>
 
             <input type="radio" name="boletim" id="nao" value="nao">
             <label for="nao">Não</label>
+
         </fieldset>
-        <br>
+
         <button>Confirmar</button>
 
     </form>
+
+
+    <!-- BootStrap
+    
+        Elementos de Linha 
+        Elementos de Bloco
+    
+    -->
+
 
 </body>
 </html>
